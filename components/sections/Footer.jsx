@@ -1,7 +1,16 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
 import { site } from "@/lib/data/site";
 
 export default function Footer() {
+  const [year, setYear] = useState(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="border-t border-line/40">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 py-10 sm:flex-row sm:px-8">
@@ -29,11 +38,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-line/30">
-        <p
-          suppressHydrationWarning
-          className="mx-auto max-w-6xl px-5 py-5 text-center font-mono text-xs text-faint sm:px-8"
-        >
-          © {new Date().getFullYear()} Mobashra Saeed — Built with Next.js, Tailwind &amp; Motion.
+        <p className="mx-auto max-w-6xl px-5 py-5 text-center font-mono text-xs text-faint sm:px-8">
+          © {year ?? ""} Mobashra Saeed — Built with Next.js, Tailwind &amp; Motion.
         </p>
       </div>
     </footer>

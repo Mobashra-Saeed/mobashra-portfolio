@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section id="about" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 sm:py-28">
       <RevealOnScroll>
-        <SectionHeading eyebrow="about" index="01" title="Engineering & design, in one toolkit." />
+        <SectionHeading eyebrow="about" index="01" title="About Me!" />
       </RevealOnScroll>
 
       <div className="mt-12 grid gap-8 lg:grid-cols-[1.4fr_1fr]">

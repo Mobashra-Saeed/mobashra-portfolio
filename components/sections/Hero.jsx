@@ -15,17 +15,16 @@ const rise = (delay) => ({
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pb-16 pt-32 sm:pb-20 sm:pt-40">
-      <div className="ambient-indigo pointer-events-none absolute inset-0 -z-10" />
+    <section className="relative overflow-hidden pb-16 pt-32 sm:pb-20 sm:pt-30">
+      <div className="ambient-accent pointer-events-none absolute inset-0 -z-10" />
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Left */}
         <div>
           <motion.div {...rise(0)} className="flex flex-wrap items-center gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 font-mono text-xs text-emerald-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Available for work
+            <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 font-mono text-xs text-accent">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Web & AI Developer
             </span>
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-accent">/// {site.role}</span>
           </motion.div>
 
           <motion.h1

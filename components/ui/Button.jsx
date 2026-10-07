@@ -6,12 +6,12 @@ const base =
 
 const variants = {
   primary: {
-    cls: "bg-accent text-white hover:text-white shadow-[0_8px_30px_-12px_rgba(99,102,241,0.7)]",
-    fill: "#818cf8",
+    cls: "bg-accent text-white hover:text-white shadow-[var(--shadow-accent)]",
+    fill: "var(--color-accent-hover)",
   },
   secondary: {
     cls: "border border-line/80 text-foreground hover:text-white hover:border-accent",
-    fill: "var(--color-accent)",
+    fill: "var(--color-accent-soft)",
   },
   ghost: {
     cls: "text-muted hover:text-white",

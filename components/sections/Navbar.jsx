@@ -34,10 +34,13 @@ export default function Navbar() {
       )}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link href="#" className="font-display text-lg font-extrabold tracking-tight text-foreground">
-          MS<span className="text-accent">.</span>
-        </Link>
+        <Link href="/" className="group flex items-center gap-3">
 
+          {/* Name Mark */}
+          <span className="font-display text-base italic font-semibold tracking-tight text-foreground transition-colors group-hover:text-accent">
+            Mobashra Saeed<span className="text-accent">.</span>
+          </span>
+        </Link>
         <div className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-sm text-muted transition-colors hover:text-white">
