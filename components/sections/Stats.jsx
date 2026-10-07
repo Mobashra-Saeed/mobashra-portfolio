@@ -85,7 +85,7 @@ export default function Stats() {
         <RevealOnScroll delay={0.1}>
           <div className="mt-12 border-t border-line/40 pt-8">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">
-              /// Trusted by clients &amp; teams
+              Trusted by clients &amp; teams
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-x-8 gap-y-3">
               {site.clients.map((c) => (

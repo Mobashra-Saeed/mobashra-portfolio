@@ -5,7 +5,7 @@ export default function SectionHeading({ eyebrow, title, index, className, align
     <div className={cn(align === "center" && "text-center", className)}>
       <div className={cn("flex items-baseline gap-3", align === "center" && "justify-center")}>
         {eyebrow && (
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">/// {eyebrow}</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">{eyebrow}</p>
         )}
         {index && (
           <span className="font-mono text-xs tracking-[0.2em] text-faint">({index})</span>

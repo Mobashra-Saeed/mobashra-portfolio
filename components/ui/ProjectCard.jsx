@@ -3,10 +3,16 @@ import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { cn, BLUR } from "@/lib/utils";
 
-const catLabel = { web: "Web Development", wordpress: "WordPress" };
+const catLabel = {
+  web: "Web Development",
+  wordpress: "WordPress",
+  chatbot: "Chatbot",
+  "ai-ml": "AI / ML",
+};
 
 export default function ProjectCard({ project }) {
   const { id, title, role, year, image, link, summary, stack, featured, category } = project;
+  const projectCategories = Array.isArray(category) ? category : [category];
 
   return (
     <article
@@ -28,9 +34,16 @@ export default function ProjectCard({ project }) {
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
-        <span className="absolute left-3 top-3 rounded-full border border-line/60 bg-background/80 px-2.5 py-1 font-mono text-[11px] text-muted backdrop-blur">
-          {catLabel[category]}
-        </span>
+        <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
+          {projectCategories.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-line/60 bg-background/80 px-2.5 py-1 font-mono text-[11px] text-muted backdrop-blur"
+            >
+              {catLabel[item]}
+            </span>
+          ))}
+        </div>
         <span className="absolute right-3 top-3 font-mono text-[11px] text-muted">{year}</span>
       </div>
 

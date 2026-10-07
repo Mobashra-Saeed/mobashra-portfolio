@@ -102,7 +102,7 @@ export default async function ProjectPage({ params }) {
 
       {project.gallery && project.gallery.length > 1 && (
         <div className="mt-14">
-          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-accent">/// Gallery</p>
+          <p className="mb-5 font-mono text-xs uppercase tracking-[0.2em] text-accent">Gallery</p>
           <ProjectGallery images={project.gallery} title={project.title} />
         </div>
       )}

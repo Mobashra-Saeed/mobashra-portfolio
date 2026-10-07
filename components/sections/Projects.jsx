@@ -10,7 +10,12 @@ import ProjectCard from "@/components/ui/ProjectCard";
 
 export default function Projects() {
   const [cat, setCat] = useState("all");
-  const filtered = cat === "all" ? projects : projects.filter((p) => p.category === cat);
+  const filtered =
+    cat === "all"
+      ? projects
+      : projects.filter((p) =>
+          Array.isArray(p.category) ? p.category.includes(cat) : p.category === cat
+        );
 
   return (
     <section id="work" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 sm:py-28">
