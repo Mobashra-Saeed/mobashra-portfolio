@@ -146,9 +146,75 @@
   will-change: transform;
 }
 
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 .marquee-mask {
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
           mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+@keyframes experience-dot-glow {
+  0%, 100% {
+    background-color: var(--color-surface-2);
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-accent) 0%, transparent);
+  }
+  18%, 36% {
+    background-color: var(--color-accent);
+    box-shadow: 0 0 14px 2px color-mix(in oklab, var(--color-accent) 55%, transparent);
+  }
+  54% {
+    background-color: var(--color-surface-2);
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-accent) 0%, transparent);
+  }
+}
+
+.experience-dot {
+  animation: experience-dot-glow 3.6s ease-in-out infinite;
+  animation-delay: calc(var(--dot-index, 0) * 0.45s);
+}
+
+@keyframes client-line-sweep {
+  0% {
+    left: 0%;
+    top: 100%;
+    opacity: 0;
+  }
+  15%, 80% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    top: 0%;
+    opacity: 0;
+  }
+}
+
+.client-strip-line {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 100%;
+  width: 10%; /* shorter streak; try 12–20% */
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--color-accent) 95%, transparent),
+    transparent
+  );
+  box-shadow: 0 0 10px color-mix(in oklab, var(--color-accent) 70%, transparent);
+  animation: client-line-sweep 4s ease-in-out infinite;
+}
+
+.client-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.client-strip {
+  scrollbar-width: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

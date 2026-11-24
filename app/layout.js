@@ -13,10 +13,10 @@ export const metadata = {
     template: `%s — ${site.name}`,
   },
   description:
-    "Web & AI Developer based in Bahawalpur, Pakistan. Building fast, accessible, production-grade web experiences with Next.js and modern AI tooling.",
+    "Full-Stack & AI Developer based in Bahawalpur, Pakistan, building web applications and AI/ML products.",
   keywords: [
-    "Mobashra Saeed", "Web Developer", "AI Developer", "Next.js Developer",
-    "Frontend Engineer", "React Developer", "Bahawalpur", "Pakistan",
+    "Mobashra Saeed", "Full-Stack Developer", "AI Developer", "Next.js Developer",
+    "Machine Learning", "Natural Language Processing", "Bahawalpur", "Pakistan",
   ],
   authors: [{ name: site.name, url: site.socials.github }],
   creator: site.name,
@@ -26,12 +26,12 @@ export const metadata = {
     url: "/",
     siteName: site.name,
     title: `${site.name} — ${site.role}`,
-    description: "Web & AI Developer crafting fast, accessible, production-grade web experiences.",
+    description: "Full-Stack & AI Developer building web applications and AI/ML products.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.role}`,
-    description: "Web & AI Developer crafting fast, accessible, production-grade web experiences.",
+    description: "Full-Stack & AI Developer building web applications and AI/ML products.",
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 };
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
       className={`${body.variable} ${mono.variable} ${display.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background text-foreground antialiased">
+      <body className="min-h-screen bg-background text-foreground antialiased" suppressHydrationWarning>
         {children}
       </body>
     </html>

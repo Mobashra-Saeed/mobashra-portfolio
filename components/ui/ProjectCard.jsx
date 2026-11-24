@@ -1,18 +1,20 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
-import { cn, BLUR } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import ProjectImage from "@/components/ui/ProjectImage";
 
 const catLabel = {
   web: "Web Development",
+  nlp: "Web / NLP",
   wordpress: "WordPress",
   chatbot: "Chatbot",
   "ai-ml": "AI / ML",
 };
 
 export default function ProjectCard({ project }) {
-  const { id, title, role, year, image, link, summary, stack, featured, category } = project;
+  const { id, title, role, year, image, link, github, summary, stack, featured, category } = project;
   const projectCategories = Array.isArray(category) ? category : [category];
+  const externalLink = link || github;
 
   return (
     <article
@@ -25,14 +27,11 @@ export default function ProjectCard({ project }) {
       <Link href={`/projects/${id}`} aria-label={`View ${title}`} className="absolute inset-0 z-10" />
 
       <div className="relative aspect-[16/10] overflow-hidden border-b border-line/50 bg-surface-2">
-        <Image
+        <ProjectImage
           src={image}
           alt={title}
-          fill
-          placeholder="blur"
-          blurDataURL={BLUR}
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+          className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]"
         />
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
           {projectCategories.map((item) => (
@@ -64,14 +63,14 @@ export default function ProjectCard({ project }) {
           <span className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors group-hover:text-accent">
             View project <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
           </span>
-          {link && (
+          {externalLink && (
             <a
-              href={link}
+              href={externalLink}
               target="_blank"
               rel="noopener noreferrer"
               className="relative z-20 inline-flex items-center gap-1 rounded-full border border-line/60 px-3 py-1.5 font-mono text-xs text-muted transition-colors hover:border-accent/60 hover:text-white"
             >
-              Live <ArrowUpRight size={13} />
+              {link ? "Live" : "Code"} <ArrowUpRight size={13} />
             </a>
           )}
         </div>

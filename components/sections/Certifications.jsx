@@ -8,7 +8,7 @@ export default function Certifications() {
     <section className="border-t border-line/40 bg-surface/20">
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <RevealOnScroll>
-          <SectionHeading eyebrow="credentials" index="04" title="Certifications & involvement." />
+          <SectionHeading eyebrow="credentials" title="Credentials and community." />
         </RevealOnScroll>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

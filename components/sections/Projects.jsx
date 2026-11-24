@@ -10,17 +10,28 @@ import ProjectCard from "@/components/ui/ProjectCard";
 
 export default function Projects() {
   const [cat, setCat] = useState("all");
+  const projectPriority = {
+    "news-credibility-classifier": 0,
+    "nlp-text-assistant": 1,
+    "nextbloom-ai-ecommerce": 2,
+  };
+  const featuredProjects = projects
+    .filter((project) => project.featured)
+    .sort(
+      (a, b) =>
+        (projectPriority[a.id] ?? 3) - (projectPriority[b.id] ?? 3)
+    );
   const filtered =
     cat === "all"
-      ? projects
-      : projects.filter((p) =>
+      ? featuredProjects
+      : featuredProjects.filter((p) =>
           Array.isArray(p.category) ? p.category.includes(cat) : p.category === cat
         );
 
   return (
     <section id="work" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 sm:py-28">
       <RevealOnScroll>
-        <SectionHeading eyebrow="selected work" index="03" title="Things I've shipped." />
+        <SectionHeading eyebrow="selected work" title="Things I've shipped." />
       </RevealOnScroll>
 
       <RevealOnScroll delay={0.05}>

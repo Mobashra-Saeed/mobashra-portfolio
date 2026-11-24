@@ -7,7 +7,7 @@ export default function Experience() {
     <section id="experience" className="border-t border-line/40 bg-surface/20">
       <div className="mx-auto max-w-6xl scroll-mt-24 px-5 py-20 sm:px-8 sm:py-28">
         <RevealOnScroll>
-          <SectionHeading eyebrow="experience" index="02" title="Where I've been building." />
+          <SectionHeading eyebrow="experience" title="Where I've been building." />
         </RevealOnScroll>
 
         <div className="mt-14">
@@ -18,9 +18,8 @@ export default function Experience() {
 
                 <div className="relative flex justify-center">
                   <span
-                    className={`mt-1.5 h-3 w-3 shrink-0 rounded-full ring-4 ring-background ${
-                      job.current ? "bg-accent" : "bg-surface-2"
-                    }`}
+                    className="experience-dot mt-1.5 h-3 w-3 shrink-0 rounded-full bg-surface-2 ring-4 ring-background"
+                    style={{ "--dot-index": i }}
                   />
                   {i < experience.length - 1 && (
                     <span className="absolute top-5 h-full w-px bg-line/60" />

@@ -1,11 +1,10 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, ArrowRight, Github } from "lucide-react";
 import { projects } from "@/lib/data/projects";
-import { BLUR } from "@/lib/utils";
 import Button from "@/components/ui/Button";
 import ProjectGallery from "@/components/ui/ProjectGallery";
+import ProjectImage from "@/components/ui/ProjectImage";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ id: p.id }));
@@ -45,15 +44,10 @@ export default async function ProjectPage({ params }) {
       <p className="mt-4 max-w-2xl text-lg text-muted">{project.summary}</p>
 
       <div className="relative mt-10 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-line/50 bg-surface-2 glow-ring">
-        <Image
+        <ProjectImage
           src={project.image}
           alt={project.title}
-          fill
-          priority
-          placeholder="blur"
-          blurDataURL={BLUR}
           sizes="(max-width: 1024px) 100vw, 1024px"
-          className="object-contain"
         />
       </div>
 

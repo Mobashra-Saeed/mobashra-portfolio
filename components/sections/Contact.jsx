@@ -19,7 +19,7 @@ export default function Contact() {
       <div className="grid gap-12 lg:grid-cols-2">
         {/* Left — info */}
         <div>
-          <SectionHeading eyebrow="contact" index="05" title="Let's build something." />
+          <SectionHeading eyebrow="contact" title="Let's build something." />
           <p className="mt-5 max-w-md leading-relaxed text-muted">
             Have a project, a role, or an idea worth shipping? Send a message and I&apos;ll get back to you.
           </p>

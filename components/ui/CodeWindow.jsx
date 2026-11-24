@@ -19,26 +19,25 @@ const SNIPPETS = [
     lines: [
       [["const ", "kw"], ["developer", "fn"], [" = {", "punct"]],
       [["  name", "key"], [": ", "punct"], ['"Mobashra Saeed"', "str"], [",", "punct"]],
-      [["  role", "key"], [": ", "punct"], ['"Web & AI Developer"', "str"], [",", "punct"]],
+      [["  role", "key"], [": ", "punct"], ['"Full-Stack & AI Developer"', "str"], [",", "punct"]],
       [
         ["  stack", "key"],
         [": [", "punct"],
-        ['"Next.js"', "str"], [", ", "punct"],
-        ['"React"', "str"], [", ", "punct"],
-        ['"TypeScript"', "str"], [",", "punct"]
+        ['"Python"', "str"], [", ", "punct"],
+        ['"Flask"', "str"], [", ", "punct"],
+        ['"JavaScript"', "str"], [",", "punct"]
       ],
       [
         ["    ", "plain"],
-        ['"Angular"', "str"], [", ", "punct"],
-        ['"JavaScript"', "str"], [", ", "punct"],
-        ['"WordPress"', "str"], [",", "punct"]
+        ['"Machine Learning"', "str"], [", ", "punct"],
+        ['"NLP"', "str"], [", ", "punct"],
+        ['"Data Science"', "str"], [",", "punct"]
       ],
       [
-        ["    ", "plain"],
-        ['"REST APIs"', "str"],
-        ["]", "punct"], [",", "punct"]
+        ["  focus", "key"], [": ", "punct"], ['"Building useful products"', "str"], [",", "punct"]
       ],
-      [["  delivered", "key"], [": ", "punct"], ['"40+ projects"', "str"], [",", "punct"]],
+      [["  tools", "key"], [": [", "punct"], ['"NLTK"', "str"], [", ", "punct"], ['"scikit-learn"', "str"], ["]", "punct"], [",", "punct"]],
+      [["  shipped", "key"], [": ", "punct"], ['"Web apps + AI tools"', "str"], [",", "punct"]],
       [["  available", "key"], [": ", "punct"], ["true", "bool"], [",", "punct"]],
       [["};", "punct"]],
     ],

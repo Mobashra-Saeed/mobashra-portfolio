@@ -23,7 +23,7 @@ export default function Hero() {
         <div>
           <motion.div {...rise(0)} className="flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 font-mono text-xs text-accent">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Web & AI Developer
+              <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Full-Stack & AI Developer
             </span>
           </motion.div>
 

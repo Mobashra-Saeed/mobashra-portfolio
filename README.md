@@ -1,6 +1,6 @@
 # Mobashra Saeed — Developer Portfolio
 
-A high-end, production-ready personal portfolio for a **Web & AI Developer**.
+A high-end, production-ready personal portfolio for a **Full-Stack & AI Developer**.
 Dark editorial design, ambient indigo accents, smooth Motion animations,
 a working contact form, and SEO/accessibility built in.
 
